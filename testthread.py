@@ -50,7 +50,7 @@ class TestThread(threading.Thread):
                     success_count = success_count + 1
                     #print 'TestThread(',count, ') success_count : ', success_count, 'response : ', the_page
                     
-            time.sleep(random.randint(1,2))
+            time.sleep(random.randint(1,10))
         etime = time.time()
         print 'TestThread(',count, ') success_count : ', success_count, '  operation time:%ss' % str(etime-stime)
 
