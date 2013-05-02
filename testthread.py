@@ -115,7 +115,7 @@ def main():
 
 
 if __name__ == '__main__':
-    if(len(sys.argv)) != 4:
+    if(len(sys.argv)) < 4:
         help()
         sys.exit()
     request_count = sys.argv[1]
