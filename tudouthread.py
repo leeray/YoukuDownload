@@ -105,13 +105,13 @@ def test():
             req = dy.anzhuo91_2(dm=model, imei=imei, imsi=imsi, mac=mac)
             queue.put(req)
             
-            req = dy.anzhuo91_3(dm=model, imei=imei, imsi=imsi, mac=mac)
-            queue.put(req)
+            # req = dy.anzhuo91_3(dm=model, imei=imei, imsi=imsi, mac=mac)
+            # queue.put(req)
             
             req = dy.anzhuo91_4(dm=model, imei=imei, imsi=imsi, mac=mac)
             queue.put(req)
             
-            whole_url_count = 4
+            whole_url_count = 3
             
         elif which_url == 'anzhuoshichang':
             req = dy.anzhuoshichang(nettype=nettype, model=model)
@@ -135,13 +135,13 @@ def test():
             req = dy.baiduzhushou_2()
             queue.put(req)
 
-            req = dy.baiduzhushou_3()
-            queue.put(req)
-
+            # req = dy.baiduzhushou_3()
+            # queue.put(req)
+            
             req = dy.baiduzhushou_4()
             queue.put(req)
             
-            whole_url_count = 4
+            whole_url_count = 3
             
         else:
             help();
