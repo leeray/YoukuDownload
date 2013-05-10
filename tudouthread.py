@@ -56,7 +56,7 @@ class TestThread(threading.Thread):
                 except urllib2.URLError, e:
                     print 'TestThread(', count, ') URLError: ', e
                 else:
-                    the_page = response.read()
+                    #the_page = response.read()
                     success_count = success_count + 1
             
             
