@@ -23,7 +23,7 @@ usage: python tudouthread.py 100000 100 anzhuo91
 Avaiable arguments:
   argv 1 : request count
   argv 2 : thread count 
-  argv 3 : factory type ('anzhuo91' , 'anzhuoshichang' , '360', 'baidu')
+  argv 3 : factory type ('anzhuo91' , 'anzhuoshichang' , '360', 'baidu', 'yingyonghui', 'uc', 'jifeng', 'anzhi')
     '''
 
 
@@ -31,6 +31,7 @@ class TestThread(threading.Thread):
     def run(self):
         global queue
         global whole_url_count
+        global which_url
         count = 0
         success_count = 0
         stime = time.time()
@@ -42,14 +43,23 @@ class TestThread(threading.Thread):
                 req = queue.get()
                 try:
                     if isinstance(req, dict):
-                        print 'POST:', req
-                        para_data = urllib.urlencode(req['data'])
-                        print 'POST:', para_data
                         # POST 
-                        response = urllib2.urlopen(req['url'], para_data, timeout=20)
+                        # print 'POST:', req
+                        para_data = ''
+                        header = ''
+                        if which_url == 'jifeng':
+                            para_data = req['data']['Data']
+                            header = req['header']
+                            request = urllib2.Request(req['url'], para_data, headers=header)
+                        else:
+                            para_data = urllib.urlencode(req['data'])
+                            request = urllib2.Request(req['url'], para_data)
+                        
+                        response = urllib2.urlopen(request, timeout=20)
+                        
                     else:
                         # GET
-                        print 'GET:', req
+                        # print 'GET:', req
                         response = urllib2.urlopen(req, timeout=20)
                 except urllib2.HTTPError, e:
                     print 'TestThread(', count, ') HTTPError: ', e
@@ -62,11 +72,11 @@ class TestThread(threading.Thread):
             
             print 'q.size():', queue.qsize(), '   whole_url_count:', whole_url_count
             if (queue.qsize() % whole_url_count) != 0:
-                print '不沉睡。同一请求.'
+                # print '不沉睡。同一请求.'
                 continue
             else:
                 sleeptime = random.randint(1,10)
-                print '沉睡%s秒.' % sleeptime
+                # print '沉睡%s秒.' % sleeptime
                 time.sleep(sleeptime)
             
         etime = time.time()
@@ -79,7 +89,7 @@ whole_url_count = 1
 queue = Queue()
 
 def test():
-    global whole_url_count
+    global whole_url_count, which_url
     
     dy = tudourequesturl.DownloadTudou();
     
@@ -95,6 +105,7 @@ def test():
         mac = ':'.join([''.join(str('%02x' % random.randint(0,255))) for i in range(6)])
         uid = ''.join([random.choice('QWERTYUIOPASDFGHJKLZXCVBNM1234567890') for i in range(32)])
         ver = dy._ver[index_ver]
+        ip = '.'.join([str(random.randint(0,254)) for i in range(4)])
         
         #print 'model:', model, '  nettype:', nettype, '  imei:', imei, '  imsi:', imsi, '  mac:', mac
         b = True
@@ -142,7 +153,67 @@ def test():
             queue.put(req)
             
             whole_url_count = 3
+        
+        elif which_url == 'yingyonghui':
+            req = dy.yingyonghui_1()
+            queue.put(req)
             
+            req = dy.yingyonghui_2()
+            queue.put(req)
+            
+            req = dy.yingyonghui_3()
+            queue.put(req)
+            
+            req = dy.yingyonghui_4()
+            queue.put(req)
+            
+            req = dy.yingyonghui_5()
+            queue.put(req)
+            
+            req = dy.yingyonghui_6()
+            queue.put(req)
+            
+            req = dy.yingyonghui_7()
+            queue.put(req)
+            
+            whole_url_count = 7
+        
+        elif which_url == 'uc':
+            req = dy.uc_1()
+            queue.put(req)
+            
+            req = dy.uc_2()
+            queue.put(req)
+            
+            whole_url_count = 2
+        
+        elif which_url == 'jifeng':
+            req = dy.jifeng_1(model=model.replace(' ', '-'), mac=mac)
+            queue.put(req)
+            
+            req = dy.jifeng_2(model=model.replace(' ', '-'), mac=mac)
+            queue.put(req)
+            
+            req = dy.jifeng_3(model=model.replace(' ', '-'), mac=mac)
+            queue.put(req)
+            
+            req = dy.jifeng_4(model=model.replace(' ', '-'), mac=mac)
+            queue.put(req)
+            
+            req = dy.jifeng_5(model=model.replace(' ', '-'), mac=mac, ip=ip)
+            queue.put(req)
+            
+            req = dy.jifeng_6(model=model.replace(' ', '-'), mac=mac, ip=ip)
+            queue.put(req)
+            
+            whole_url_count = 6
+            
+        elif which_url == 'anzhi':
+            req = dy.anzhi_1()
+            queue.put(req)
+            
+            whole_url_count = 1
+        
         else:
             help();
             sys.exit();
