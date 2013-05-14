@@ -126,11 +126,204 @@ class DownloadYouku():
         url = 'http://m.baidu.com/app?uid=%s%%257C824296410460768&f=content%%40&=&psize=3&usertype=0&ver=16780556&from=1092gs&tj=soft_2952022_1827869107_%%E4%%BC%%98%%E9%%85%%B7&operator=460020&network=WF&pkname=com.baidu.appsearch&country=CN&gms=true&platform_version_id=16&firstdoc=2692127&action=download&pu=cua%%40720_1280_android_4.0_320%%2Cosname%%40baiduappsearch%%2Cctv%%401%%2Ccfrom%%401092gs%%2Ccuid%%40%s%%25257C824296410460768%%2Ccut%%40%s_%s_16_%s&language=zh&apn=&' % (uid, uid, xinghao, ver, pingpai)
         req = urllib2.Request(url)
         return req
-    
-    def baiduzhushou_2(self, uid='360F505CC708AB56E4F071B29BC48D65', pingpai='Xiaomi', xinghao='MI%%25', ver='4.1.1'):
-        url = 'http://m.baidu.com/app?uid=%s%%257C824296410460768&f=content%%40topupsoft%%4010%%401&=&psize=3&usertype=0&ver=16780556&from=1092gs&tj=soft_2952022_1827869107_%%E4%%BC%%98%%E9%%85%%B7&operator=460020&network=WF&pkname=com.baidu.appsearch&country=CN&gms=true&platform_version_id=16&firstdoc=2692127&action=download&pu=cua%%40720_1280_android_4.0_320%%2Cosname%%40baiduappsearch%%2Cctv%%401%%2Ccfrom%%401092gs%%2Ccuid%%40%s%%25257C824296410460768%%2Ccut%%40%s_%s_16_%s&language=zh&apn=&' % (uid, uid, xinghao, ver, pingpai)
+
+    def baiduzhushou_2(self):
+        req = {}
+
+        url = 'http://loc.map.baidu.com/sdk.php'
+
+        data = {'qt':'conf', 'req':'4Oqhv6ev6rvm56nmo-T07e6blezrzeDkmOPmkuKWxu7UiKDa-Ibb3Ib3h_OJ3dSJgM3FxcGZwcDLxcTCzMSRxPqb0KCT5r287YNYwqo0TP..|tp=3'}
+
+        req['url'] = url
+        req['data'] = data
+
+        return req
+
+    def baiduzhushou_3(self) :
+
+        url = 'http://gdown.baidu.com/data/wisegame/a38745f785e331c0/tudou.apk'
         req = urllib2.Request(url)
         return req
+
+
+    def baiduzhushou_4(self):
+        req = {}
+
+        url = 'http://loc.map.baidu.com/sdk.php'
+
+        data = {'bloc':'4aGz9_3t-fH7-6Wi7PXv8L3msbCj6-bgsrKh5b2Fqu7V28KJ1rTOgNfchYqA3YvcnMiYncffnZTQmNvajYbJyKH44rfou7nk4r_q6uHg5rX2qfnz46_9_fzy9KOoqqj3lZSSmcHXysWXn8TEyJXAlIuK09-OgsKI1NfR1dTb2IZ1d3ZxLXohYXZ_ISQjIHIlOG0wOGRubGN4NTc3NW1qNwJWXF8KUA0OXRMKUVJSAwBJHkoYRkBFTxEeWxBBHkFCPmxgPWlqaWYxOGguYDVrMn8rfngoK399f3J_fW0qKSERHEFLQxMcTRQUREpLWUMUXwlbDV4ABl5UVVxeAQFF-v6t_fv__f6q8amrrqn1qafp7Lm5u-y877S1srnr4evXmomG3Iza3YTf2oOG1N2Kz5eAmMzPnsnAk56UkMDNw7Swt_m8uL--t7Lp4LDi5-Cg9Kry6en8wPn49-C29sbr2Jucg9qd956Gmp3Bw8mWyoPUjd7fiIqZxIGN29KeiJ4tIig3cHokdzQkI31nLCFxMTxuL2wrZ20WRDY0RWFtHlpULVwreVEJBiNbcAwGVAE5Hz8QGE9CA0AUHx4RQElNPDY9MjluO30_ZTEVAXxPayp-JB9pbH9sfiF7d3M2dmsRZx0TCwheRkYJHVxHV0UcBl8OTx1PBw4RFRQJBQ1Yt722qKO--6HL8qqp5_v7o7e54LCg7LyytKOo5vHwoL2Gn4aFnnU6BT-a|tp=3'}
+
+        req['url'] = url
+        req['data'] = data
+
+        return req
+
+    def yingyonghui_1(self) :
+        req = {}
+
+        url = 'http://mobile.appchina.com/market/api'
+        data = {'key':'',
+        'referer':'ce9f14f2-827c-4cbc-9474-d91bd1438d45',
+        'api':'market.MarketAPI',
+        'deviceId':'354710050008917',
+        'param':'{"id":895425,"guid":"ce9f14f2-827c-4cbc-9474-d91bd1438d45","type":"app.detail","apiVer":"2","gpuType":4}'}
+
+        req['url'] = url
+        req['data'] = data
+        return req
+
+    def yingyonghui_2(self) :
+        req = {}
+        url = 'http://mobile.appchina.com/market/api'
+        data = {'key':'',
+        'referer':'ce9f14f2-827c-4cbc-9474-d91bd1438d45',
+        'api':'market.MarketAPI',
+        'deviceId':'354710050008917',
+        'param':'{"guid":"ce9f14f2-827c-4cbc-9474-d91bd1438d45","appid":895425,"type":"accountcomment.list","start":0,"apiVer":"2","size":10}'}
+
+        req['url'] = url
+        req['data'] = data
+        return req
+
+    def yingyonghui_3(self) :
+
+        url = 'http://mobile.appchina.com/market/e/895425/0/0/0/package_18.apk?channel=ac.ex.BaiduWL&ug=0&ct=1368412429697&p=Detail&r=Category&i=25&k=download.306'
+        req = urllib2.Request(url)
+        return req
+
+    def yingyonghui_4(self) :
+
+        url = 'http://mobile.d.appchina.com/McDonald/e/895425/0/0/0/package_18.apk?channel=ac.ex.BaiduWL&ug=0&ct=1368412429697&p=Detail&r=Category&i=25&k=download.306'
+        req = urllib2.Request(url)
+        return req
+
+    def yingyonghui_5(self) :
+
+        url = 'http://fast.yingyonghui.com/19f9bcca62a65fd3df20878fdd288c3c/5190433c/apk/895425/com.tudou.android.1367803319807.apk'
+        req = urllib2.Request(url)
+        return req
+
+    def yingyonghui_6(self) :
+        req = {}
+        url = 'http://mobile.appchina.com/market/api'
+        data = {'key':'',
+        'referer':'ce9f14f2-827c-4cbc-9474-d91bd1438d45',
+        'api':'market.MarketAPI',
+        'deviceId':'354710050008917',
+        'param':'{"guid":"ce9f14f2-827c-4cbc-9474-d91bd1438d45","appid":895425,"type":"accountcomment.list","start":0,"apiVer":"2","size":10}'}
+
+        req['url'] = url
+        req['data'] = data
+        return req
+
+    def yingyonghui_7(self) :
+        req = {}
+        url = 'http://openbox.mobilem.360.cn/mintf/getAppsByPackNames'
+        data = {'ks':'com.tudou.android|18|0|土豆&type=2&os=16&i=d6ed1263129ac06c6b21102763de7931',
+        'type':'2',
+        'os':'16',
+        'i':'d6ed1263129ac06c6b21102763de7931'}
+
+        req['url'] = url
+        req['data'] = data
+        return req
+
+    def uc_1(self):
+        url = 'http://s1.app.uc.cn/pack/2013/05/10/Tudou_Android_3.1_ucweb.apk'
+        req = urllib2.Request(url)
+        return req
+
+
+    def uc_2(self) :
+        req = {}
+        url = 'http://m.app.uc.cn/apk/api/1.1/stat/download.json?source=client'
+        data = {'':''}
+
+        req['url'] = url
+        req['data'] = data
+        return req
+
+    def jifeng_1(self, nettype='WIFI', model='MI-2', mac='c4:6a:b7:4e:e3:36', device='867064014692428'):
+        req = {}
+        headers = {'User-Agent': 'Dalvik/1.6.0 (Linux; U; Android 4.1.2; %s Build/JZO54K)' % model
+        ,'Connection': 'Keep-Alive'
+        ,'Host': 'api.gfan.com'
+        ,'G-Header': '%s/4.1.2/aMarket2.0/0.9.7beta/9/354710050008917/null/%s' % (model, mac)
+        }
+        url = 'http://api.gfan.com/market/api/getProductDetail'
+        data = {'Data':'<request version="2" local_version="-1"><p_id>16902</p_id><source_type>0</source_type></request>'}
+        req['url'] = url
+        req['data'] = data
+        req['header'] = headers
+        return req
+
+    def jifeng_2(self, nettype='WIFI', model='MI-2', mac='c4:6a:b7:4e:e3:36', device='867064014692428'):
+        req = {}
+        headers = {'User-Agent': 'Dalvik/1.6.0 (Linux; U; Android 4.1.2; %s Build/JZO54K)' % model
+        ,'Connection': 'Keep-Alive'
+        ,'Host': 'api.gfan.com'
+        ,'G-Header': '%s/4.1.2/aMarket2.0/0.9.7beta/9/354710050008917/null/%s' % (model, mac)
+        }
+        url = 'http://api.gfan.com/market/api/tagsByApp'
+        data = {'Data':'<request version="2"><p_id>16902</p_id><screen_size>480#800</screen_size><match_type>1</match_type><platform>16</platform></request>'}
+        req['url'] = url
+        req['data'] = data
+        req['header'] = headers
+        return req
+
+    def jifeng_3(self, nettype='WIFI', model='MI-2', mac='c4:6a:b7:4e:e3:36', device='867064014692428'):
+        req = {}
+        headers = {'User-Agent': 'Dalvik/1.6.0 (Linux; U; Android 4.1.2; %s Build/JZO54K)' % model
+        ,'Connection': 'Keep-Alive'
+        ,'Host': 'api.gfan.com'
+        ,'G-Header': '%s/4.1.2/aMarket2.0/0.9.7beta/9/354710050008917/null/%s' % (model, mac)
+        }
+        url = 'http://api.gfan.com/market/api/getDownloadUrl'
+        data = {'Data':'<request version="2"><p_id>16902</p_id><uid></uid><source_type>0</source_type></request>'}
+        req['url'] = url
+        req['data'] = data
+        req['header'] = headers
+        return req
+
+    def jifeng_4(self, nettype='WIFI', model='MI-2', mac='c4:6a:b7:4e:e3:36', device='867064014692428'):
+        url = 'http://cdn2.down.apk.gfan.com/asdf/Pfiles/2013/5/6/16902_f2d99353-1174-42f1-99ea-5764c76d3561.apk'
+        req = urllib2.Request(url)
+        return req
+
+    def jifeng_5(self, nettype='WIFI', model='MI-2', mac='c4:6a:b7:4e:e3:36', device='867064014692428', ip='61.147.122.97'):
+        req = {}
+        headers = {'User-Agent': 'Dalvik/1.6.0 (Linux; U; Android 4.1.2; %s Build/JZO54K)' % model
+        ,'Connection': 'Keep-Alive'
+        ,'Host': 'api.gfan.com'
+        ,'G-Header': '%s/4.1.2/aMarket2.0/0.9.7beta/9/354710050008917/null/%s' % (model, mac)
+        }
+        url = 'http://api.gfan.com/market/api/downReport'
+        data = {'Data':'<request version="2"><uid>-1</uid><package_name>com.tudou.android</package_name><report_type>0</report_type><source_type>0</source_type><cpid>web261</cpid><p_id></p_id><url>http://cdn2.down.apk.gfan.com/asdf/Pfiles/2013/5/6/16902_f2d99353-1174-42f1-99ea-5764c76d3561.apk</url><size>0</size><net_context>network is wifi</net_context><ip>%s</ip></request>' % ip}
+        req['url'] = url
+        req['data'] = data
+        req['header'] = headers
+        return req
+
+    def jifeng_6(self, nettype='WIFI', model='MI-2', mac='c4:6a:b7:4e:e3:36', device='867064014692428', ip='61.147.122.97'):
+        req = {}
+        headers = {'User-Agent': 'Dalvik/1.6.0 (Linux; U; Android 4.1.2; %s Build/JZO54K)' % model
+        ,'Connection': 'Keep-Alive'
+        ,'Host': 'api.gfan.com'
+        ,'G-Header': '%s/4.1.2/aMarket2.0/0.9.7beta/9/354710050008917/null/%s' % (model, mac)
+        }
+        url = 'http://api.gfan.com/market/api/downReport'
+        data = {'Data':'<request version="2"><uid>-1</uid><package_name></package_name><report_type>1</report_type><source_type>0</source_type><cpid>web261</cpid><p_id></p_id><url>http://cdn2.down.apk.gfan.com/asdf/Pfiles/2013/5/6/16902_f2d99353-1174-42f1-99ea-5764c76d3561.apk</url><size>7743407</size><net_context>network is wifi</net_context><ip>%s</ip></request>' % ip}
+        req['url'] = url
+        req['data'] = data
+        req['header'] = headers
+        return req
+
+
+    def anzhi_1(self):
+        url = 'http://am.apk.anzhi.com/apk/201305/02/com.tudou.android_05130700_0.apk?vcode=4310&nettype=WIFI&wap=WIFI'
+        req = urllib2.Request(url)
+        return req
+
 
 def main():
 	#anzhuoshichang();
