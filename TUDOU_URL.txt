@@ -199,3 +199,36 @@ Full request URI: http://am.apk.anzhi.com/apk/201305/02/com.tudou.android_051307
 
 
 
+anzhuoshichang============
+
+Full request URI: http://market.hiapk.com/service/api2.php?qt=9001&apk=1432169&sign=416b23f9fe509057bbebe8ef78dd12e9&lowapkmd5=null&type=1&source=1
+
+Full request URI: http://cdn.market.hiapk.com/data/upload/2013/05_07/17/com.tudou.android_171659.apk
+
+
+
+
+
+
+yingyonghui ==============
+POST
+Full request URI: http://mobile.appchina.com/market/api
+key=&referer=ce9f14f2-827c-4cbc-9474-d91bd1438d45&api=market.MarketAPI&deviceId=354710050008917&param=%7B%22id%22%3A895425%2C%22guid%22%3A%22ce9f14f2-827c-4cbc-9474-d91bd1438d45%22%2C%22type%22%3A%22app.detail%22%2C%22apiVer%22%3A%222%22%2C%22gpuType%22%3A4%7D
+
+POST
+Full request URI: http://mobile.appchina.com/market/api
+key=&referer=ce9f14f2-827c-4cbc-9474-d91bd1438d45&api=market.MarketAPI&deviceId=354710050008917&param=%7B%22guid%22%3A%22ce9f14f2-827c-4cbc-9474-d91bd1438d45%22%2C%22appid%22%3A895425%2C%22type%22%3A%22accountcomment.list%22%2C%22start%22%3A0%2C%22apiVer%22%3A%222%22%2C%22size%22%3A10%7D
+
+GET
+Full request URI: http://mobile.appchina.com/market/e/895425/0/0/0/package_18.apk?channel=ac.ex.BaiduWL&ug=0&ct=1368694684755&p=Detail&r=Category&i=25&k=download.306
+
+GET
+Full request URI: http://mobile.d.appchina.com/McDonald/e/895425/0/0/0/package_18.apk?channel=ac.ex.BaiduWL&ug=0&ct=1368694684755&p=Detail&r=Category&i=25&k=download.306
+
+GET
+Full request URI: http://fast.yingyonghui.com/6fdb8b29abcaf38196fbe1cf46ed4bcf/519492a9/apk/895425/com.tudou.android.1367803319807.apk
+
+POST
+Full request URI: http://mobile.appchina.com/market/api
+key=&referer=ce9f14f2-827c-4cbc-9474-d91bd1438d45&api=market.MarketAPI&deviceId=354710050008917&param=%7B%22guid%22%3A%22ce9f14f2-827c-4cbc-9474-d91bd1438d45%22%2C%22appid%22%3A895425%2C%22type%22%3A%22accountcomment.list%22%2C%22start%22%3A0%2C%22apiVer%22%3A%222%22%2C%22size%22%3A10%7D
+

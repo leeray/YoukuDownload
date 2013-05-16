@@ -41,32 +41,45 @@ class TestThread(threading.Thread):
             else:
                 count = count + 1
                 req = queue.get()
+                method = req['method']
                 try:
-                    if isinstance(req, dict):
+                    header = req.get('header') or ''
+                    if method == 'POST':
                         # POST 
-                        # print 'POST:', req
                         para_data = ''
-                        header = ''
-                        if which_url == 'jifeng':
+                        if req.get('dataType') and req['dataType']=='XML':
                             para_data = req['data']['Data']
-                            header = req['header']
+                        elif req.get('data'):
+                            para_data = urllib.urlencode(req['data'])
+                        else:
+                            para_data = ''
+                        
+                        if header:
                             request = urllib2.Request(req['url'], para_data, headers=header)
                         else:
-                            para_data = urllib.urlencode(req['data'])
                             request = urllib2.Request(req['url'], para_data)
                         
                         response = urllib2.urlopen(request, timeout=20)
-                        
+
                     else:
                         # GET
-                        # print 'GET:', req
-                        response = urllib2.urlopen(req, timeout=20)
+                        if header:
+                            request = urllib2.Request(req['url'], headers=header)
+                        else:
+                            request = urllib2.Request(req['url'])
+                            
+                        response = urllib2.urlopen(request, timeout=20)
+
+                    if req['package'] is False:
+                        the_page = response.read()
+                        # print 'URL:', req['url'] 
+                        # print 'RESPONSE:', the_page
+                    
                 except urllib2.HTTPError, e:
                     print 'TestThread(', count, ') HTTPError: ', e
                 except urllib2.URLError, e:
                     print 'TestThread(', count, ') URLError: ', e
                 else:
-                    #the_page = response.read()
                     success_count = success_count + 1
             
             
@@ -125,10 +138,13 @@ def test():
             whole_url_count = 3
             
         elif which_url == 'anzhuoshichang':
-            req = dy.anzhuoshichang(nettype=nettype, model=model)
+            req = dy.anzhuoshichang_1(nettype=nettype, model=model)
             queue.put(req)
             
-            whole_url_count = 1 
+            req = dy.anzhuoshichang_2(nettype=nettype, model=model)
+            queue.put(req)
+            
+            whole_url_count = 2
             
         elif which_url == '360':
             req = dy.shouji360_1()
@@ -146,13 +162,13 @@ def test():
             req = dy.baiduzhushou_2()
             queue.put(req)
 
-            # req = dy.baiduzhushou_3()
-            # queue.put(req)
+            req = dy.baiduzhushou_3()
+            queue.put(req)
             
             req = dy.baiduzhushou_4()
             queue.put(req)
             
-            whole_url_count = 3
+            whole_url_count = 4
         
         elif which_url == 'yingyonghui':
             req = dy.yingyonghui_1()
@@ -172,11 +188,8 @@ def test():
             
             req = dy.yingyonghui_6()
             queue.put(req)
-            
-            req = dy.yingyonghui_7()
-            queue.put(req)
-            
-            whole_url_count = 7
+
+            whole_url_count = 6
         
         elif which_url == 'uc':
             req = dy.uc_1()
