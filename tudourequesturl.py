@@ -114,7 +114,7 @@ class DownloadTudou():
     
     def shouji360_1(self) :
         req = {}
-        url = 'http://s.360.cn/360baohe/index.php?para=QWN0aW9uPWFib3gmbWlkPWQ2ZWQxMjYzMTI5YWMwNmM2YjIxMTAyNzYzZGU3OTMxJlVpVmVyc2lvbj0xMDAmTXlWZXJzaW9uPTEuOS41NSZDaGFubmVsPTYyMDAwMCZBbmRyb2lkSUQ9N2I5MzU4ZDVlZDMwZGI5ZCZOZXRUeXBlPTEmRGF0YT0lNDEwN19seTMxX2tzMF9tYXJrZXQzNjBtYXJrZXRfemwxNCZhdD0xJmZyb209aG9tZV9zZjAwNF9jc2lkMTRfMF8zJnN0YXJ0eXBlPTEmcnRpbWU9MTM2ODA4MjczMzI4MCZzaWduPUQ5MTE3RDE4QjNGNTY0NUM0OEU0NzgwQjlEQjJFNDI4'
+        url = 'http://s.360.cn/360baohe/index.php?para=QWN0aW9uPWFib3gmbWlkPWQ2ZWQxMjYzMTI5YWMwNmM2YjIxMTAyNzYzZGU3OTMxJlVpVmVyc2lvbj0xMDAmTXlWZXJzaW9uPTEuOS41NSZDaGFubmVsPTYyMDAwMCZBbmRyb2lkSUQ9N2I5MzU4ZDVlZDMwZGI5ZCZOZXRUeXBlPTEmRGF0YT0lNDEwN19seTMxX2tzMF9tYXJrZXQzNjBtYXJrZXRfemwxNCZhdD0xJmZyb209Y2F0aV9zZjAwNF9jc2lkMTRfMF8zJnN0YXJ0eXBlPTEmcnRpbWU9MTM2ODc3OTY5OTI3MiZzaWduPUQ2NDJBODQxMjc2QUUxRTcwODU5MzgzMzUyNzYyMjYz'
         req['url'] = url
         req['method'] = 'GET'
         req['package'] = False
@@ -122,12 +122,42 @@ class DownloadTudou():
     
     def shouji360_2(self) :
         req = {}
-        url = 'http://s.360.cn/360baohe/index.php?para=QWN0aW9uPWFib3hpbnN0YWxsJm1pZD1kNmVkMTI2MzEyOWFjMDZjNmIyMTEwMjc2M2RlNzkzMSZVaVZlcnNpb249MTAwJk15VmVyc2lvbj0xLjkuNTUmQ2hhbm5lbD02MjAwMDAmQW5kcm9pZElEPTdiOTM1OGQ1ZWQzMGRiOWQmTmV0VHlwZT0xJm9zPTE2JmFwcGlkPTQxMDcmcG5hbWU9Y29tLnR1ZG91LmFuZHJvaWQmc2l6ZT03NzU1NzA5JnZjb2RlPTE4JnVybD1odHRwJTNBJTJGJTJGbS5zaG91amkuMzYwdHBjZG4uY29tJTJGMzYwc2olMkZkZXYlMkYyMDEzMDQyOCUyRmNvbS50dWRvdS5hbmRyb2lkXzE4XzIxMzAyMi5hcGsmaW5zdGFsbFR5cGU9MSZyZXN1bHRUeXBlPTAmZnJvbT1ob21lX3NmMDA0X2NzaWQxNF8wXzMmc3RhcnR5cGU9MQ=='
+        url = 'http://s.360.cn/360baohe/index.php?para=QWN0aW9uPWFib3hpbnN0YWxsJm1pZD1kNmVkMTI2MzEyOWFjMDZjNmIyMTEwMjc2M2RlNzkzMSZVaVZlcnNpb249MTAwJk15VmVyc2lvbj0xLjkuNTUmQ2hhbm5lbD02MjAwMDAmQW5kcm9pZElEPTdiOTM1OGQ1ZWQzMGRiOWQmTmV0VHlwZT0xJm9zPTE2JmFwcGlkPTQxMDcmcG5hbWU9Y29tLnR1ZG91LmFuZHJvaWQmc2l6ZT03NzU1NzA5JnZjb2RlPTE4JnVybD1odHRwJTNBJTJGJTJGbS5zaG91amkuMzYwdHBjZG4uY29tJTJGMzYwc2olMkZkZXYlMkYyMDEzMDQyOCUyRmNvbS50dWRvdS5hbmRyb2lkXzE4XzIxMzAyMi5hcGsmaW5zdGFsbFR5cGU9MSZyZXN1bHRUeXBlPTAmZnJvbT1jYXRpX3NmMDA0X2NzaWQxNF8wXzMmc3RhcnR5cGU9MQ=='
         req['url'] = url
         req['method'] = 'GET'
         req['package'] = False
         return req
     
+    def shouji360_3(self) :
+        req = {}
+        url = 'http://openbox.mobilem.360.cn/mintf/getAppsByPackNames'
+        data = {'ks[]':'com.tudou.android|18|0|土豆',
+        'type':'2',
+        'os':'16',
+        'i':'d6ed1263129ac06c6b21102763de7931'}
+        
+        headers = {'Accept-Encoding': 'gzip,deflate',
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Host': 'openbox.mobilem.360.cn',
+        'Charset': 'UTF-8',
+        'Connection': 'close',
+        'accept': '*/*',
+        'http.useragent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.125 Safari/533.4',
+        'User-Agent': 'Dalvik/1.6.0 (Linux; U; Android 4.1.2; GT-I9128V Build/JZO54K)'}
+        req['url'] = url
+        req['data'] = data
+        req['header'] = headers
+        req['method'] = 'POST'
+        req['package'] = False
+        return req
+        
+    def shouji360_4(self) :
+        req = {}
+        url = 'http://m.shouji.360tpcdn.com/360sj/dev/20130428/com.tudou.android_18_213022.apk'
+        req['url'] = url
+        req['method'] = 'GET'
+        req['package'] = True
+        return req
     
     def baiduzhushou_1(self, uid='360F505CC708AB56E4F071B29BC48D65', pingpai='Xiaomi', xinghao='MI%%25', ver='4.1.1'):
         req = {}

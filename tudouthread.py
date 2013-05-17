@@ -72,8 +72,8 @@ class TestThread(threading.Thread):
 
                     if req['package'] is False:
                         the_page = response.read()
-                        # print 'URL:', req['url'] 
-                        # print 'RESPONSE:', the_page
+                        print 'URL:', req['url'] 
+                        print 'RESPONSE:', the_page
                     
                 except urllib2.HTTPError, e:
                     print 'TestThread(', count, ') HTTPError: ', e
@@ -129,13 +129,13 @@ def test():
             req = dy.anzhuo91_2(dm=model, imei=imei, imsi=imsi, mac=mac)
             queue.put(req)
             
-            # req = dy.anzhuo91_3(dm=model, imei=imei, imsi=imsi, mac=mac)
-            # queue.put(req)
+            req = dy.anzhuo91_3(dm=model, imei=imei, imsi=imsi, mac=mac)
+            queue.put(req)
             
             req = dy.anzhuo91_4(dm=model, imei=imei, imsi=imsi, mac=mac)
             queue.put(req)
             
-            whole_url_count = 3
+            whole_url_count = 4
             
         elif which_url == 'anzhuoshichang':
             req = dy.anzhuoshichang_1(nettype=nettype, model=model)
@@ -153,7 +153,13 @@ def test():
             req = dy.shouji360_2()
             queue.put(req)
             
-            whole_url_count = 2
+            req = dy.shouji360_3()
+            queue.put(req)
+            
+            req = dy.shouji360_4()
+            queue.put(req)
+            
+            whole_url_count = 4
             
         elif which_url == 'baidu':
             req = dy.baiduzhushou_1(uid=uid, pingpai=model.split(' ')[0], xinghao=''.join(model.split(' ')[1:]), ver=ver)
