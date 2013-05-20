@@ -54,6 +54,9 @@ class TestThread(threading.Thread):
                         else:
                             para_data = ''
                         
+                        print para_data
+                        print header
+                        
                         if header:
                             request = urllib2.Request(req['url'], para_data, headers=header)
                         else:
@@ -120,6 +123,18 @@ def test():
         ver = dy._ver[index_ver]
         ip = '.'.join([str(random.randint(0,254)) for i in range(4)])
         
+        sign = ''.join([random.choice('qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890') for i in range(32)])
+        sign_1 = ''.join([random.choice('qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890') for i in range(22)])
+        sign_2 = ''.join([random.choice('qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890') for i in range(22)])
+        
+        sign_1 = '%s%s==' % (sign, sign_1)
+        sign_2 = '%s%s==' % (sign, sign_2)
+        
+        cuid = ''.join([random.choice('QWERTYUIOPASDFGHJKLZXCVBNM1234567890') for i in range(32)])
+        cuid_1 = ''.join([random.choice('1234567890') for i in range(15)])
+        cuid_2 = '%s%%7C%s' % (cuid, cuid_1)
+        cuid_3 = '%s%%257C%s' % (cuid, cuid_1)
+        
         #print 'model:', model, '  nettype:', nettype, '  imei:', imei, '  imsi:', imsi, '  mac:', mac
         b = True
         if which_url == 'anzhuo91' :
@@ -129,13 +144,16 @@ def test():
             req = dy.anzhuo91_2(dm=model, imei=imei, imsi=imsi, mac=mac)
             queue.put(req)
             
-            req = dy.anzhuo91_3(dm=model, imei=imei, imsi=imsi, mac=mac)
+            req = dy.anzhuo91_3(dm=model, imei=imei, imsi=imsi, mac=mac, sign=sign_1)
             queue.put(req)
             
-            req = dy.anzhuo91_4(dm=model, imei=imei, imsi=imsi, mac=mac)
+            req = dy.anzhuo91_4(dm=model, imei=imei, imsi=imsi, mac=mac, sign=sign_2)
             queue.put(req)
             
-            whole_url_count = 4
+            req = dy.anzhuo91_5(dm=model, imei=imei, imsi=imsi, mac=mac, sign=sign_2, cuid=cuid_2, cuid2=cuid_3)
+            queue.put(req)
+            
+            whole_url_count = 5
             
         elif which_url == 'anzhuoshichang':
             req = dy.anzhuoshichang_1(nettype=nettype, model=model)

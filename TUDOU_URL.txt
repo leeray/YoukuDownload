@@ -259,11 +259,54 @@ ks[]=com.tudou.android|18|0|%E5%9C%9F%E8%B1%86&type=2&os=16&i=d6ed1263129ac06c6b
 
 
 
+91====================
+
+Full request URI [truncated]: http://bbx2.sj.91.com/soft/phone/detail.aspx?act=226&resId=4796706&title=%e5%9c%9f%e8%b1%86%e7%94%b5%e5%bd%b1%e7%94%b5%e8%a7%86%e5%89%a7&pact=228&iv=7&pos=25&placeId=222029981&mt=4&sv=3.2.9.5&pid=2&osv=4.1&cpu=armeabi-v7a,armeabi
+
+Full request URI: http://comment.sj.91.com/Service/getcomment.aspx?resourcetype=1&resourceid=4796706&pagesize=10&pageindex=1&format=json&mt=4&sv=3.2.9.5&osv=4.1&cpu=armeabi-v7a,armeabi&imei=354710050008917&imsi=&nt=10&dm=GT-I9128V
+
+Full request URI: http://bbx2.sj.91.com/softs.ashx?act=249&mt=4&sv=3.2.9.5&osv=4.1&cpu=armeabi-v7a,armeabi&imei=354710050008917&nt=10&dm=GT-I9128V&resid=4796706&imsi=
+
+Full request URI: http://recommend.sj.91.com/service.ashx?act=240&platform=4&fw=4.1&imei=354710050008917&islimit=0&softid=4796706&size=15&proj=300&iv=7&mt=4&sv=3.2.9.5&osv=4.1&cpu=armeabi-v7a,armeabi&imsi=&nt=10&dm=GT-I9128V
+
+Full request URI: http://comment.sj.91.com/Service/getcomment.aspx?resourcetype=1&resourceid=4796706&pagesize=2&pageindex=1&format=json&mt=4&sv=3.2.9.5&osv=4.1&cpu=armeabi-v7a,armeabi&imei=354710050008917&imsi=&nt=10&dm=GT-I9128V
+
+Full request URI: http://bbx2.sj.91.com/softs.ashx?act=249&mt=4&sv=3.2.9.5&osv=4.1&cpu=armeabi-v7a,armeabi&imei=354710050008917&nt=10&dm=GT-I9128V&resid=4796706&imsi=
+
+Full request URI [truncated]: http://bbx2.sj.91.com/softs.ashx?act=207&resid=4796706&resname=%e5%9c%9f%e8%b1%86%e7%94%b5%e5%bd%b1%e7%94%b5%e8%a7%86%e5%89%a7&versionname=3.1&icon=http%3a%2f%2fhiapk.91rb.com%2fdata%2fupload%2f2013%2f05_02%2f16%2f201305021616527543.png&catename=%e8%a7%86%e9%a2%91%e8%bd%af%e4%bb%b6&size=7.38MB&fsize=7743381&identifer=com.tudou.android&restype=1&versioncode=18&score=0&placeid=222029981&mt=4&sv=3.2.9.5&pid=2&osv=4.1&cpu=armeabi-v7a,armeabi&price=0.00&pos=25&imei=354710050008917&nt=10&dm=GT-I9128V&iv=4&imsi=
+
+Full request URI: http://sj.91rb.com/android/soft//2013/2/20/74b19a07223947e39fbcd44cfa863d62/com.tudou.android_18_3.1_635035419050632500.apk
+
+Full request URI [truncated]: http://bbxdata.sj.91.com/stat.ashx?mt=4&sv=3.2.9.5&osv=4.1&cpu=armeabi-v7a,armeabi&imei=354710050008917&nt=10&dm=GT-I9128V&act=101&resid=4796706&stattype=4&restype=1&isincr=0&placeid=222029981&sign=lGkOm3rH4J92Hf1vHOLkijmLzvOE9uccPmrMQPoqwZ02NUeYWMSAug%3D%3D&imsi=
+
+Full request URI [truncated]: http://bbxdata.sj.91.com/stat.ashx?mt=4&sv=3.2.9.5&osv=4.1&cpu=armeabi-v7a,armeabi&imei=354710050008917&nt=10&dm=GT-I9128V&act=101&resid=4796706&stattype=5&restype=1&root=0&isincr=0&placeid=222029981&sign=lGkOm3rH4J92Hf1vHOLkijmLzvOE9uccyIhOXgCZxAZJYtUrulb%2BfQ%3D%3D&imsi=
+
+Full request URI [truncated]: http://m.baidu.com/appsrv?uid=2AA02D14F62A9FB924D7B9723B3C9718%257C719800050017453&native_api=1&psize=2&usertype=0&ver=16780818&from=1092a&operator=&network=WF&pkname=com.baidu.appsearch&country=CN&gms=false&platform_version_id=16&firstdoc=&activetime=1368071853906&action=interfacesec&pu=cua%40480_800_android_4.1.1_240%2Cosname%40baiduappsearch%2Cctv%401%2Ccfrom%401092a%2Ccuid%402AA02D14F62A9FB924D7B9723B3C9718%25257C719800050017453%2Ccut%40GT-I9128V_4.1.2_16_samsung&language=zh&apn=&
+POST /appsrv?uid=2AA02D14F62A9FB924D7B9723B3C9718%257C719800050017453&native_api=1&psize=2&usertype=0&ver=16780818&from=1092a&operator=&network=WF&pkname=com.baidu.appsearch&country=CN&gms=false&platform_version_id=16&firstdoc=&activetime=1368071853906&action=interfacesec&pu=cua%40480_800_android_4.1.1_240%2Cosname%40baiduappsearch%2Cctv%401%2Ccfrom%401092a%2Ccuid%402AA02D14F62A9FB924D7B9723B3C9718%25257C719800050017453%2Ccut%40GT-I9128V_4.1.2_16_samsung&language=zh&apn=& HTTP/1.1
+Line-based text data: application/x-www-form-urlencoded:
+
+version=%7B%22app_events_version%22%3A%2216_0%22%2C%22set_urls_version%22%3A%2216_5%22%2C%22app_version_name%22%3A%22v4.1.1%22%2C%22set_settings_version%22%3A%2216_14%22%2C%22events%22%3A%5B%7B%22api%22%3A1%2C%22event%22%3A2%2C%22parameters%22%3A%22event%402%2Cfrom%401092a%2Cuid%402AA02D14F62A9FB924D7B9723B3C9718%257C719800050017453%2Cpu%40cua%40480_800_android_4.1.1_240%2Cosname%40baiduappsearch%2Cctv%401%2Ccfrom%401092a%2Ccuid%402AA02D14F62A9FB924D7B9723B3C9718%25257C719800050017453%2Ccut%40GT-I9128V_4.1.2_16_samsung%2Cver%4016780818%22%2C%22name%22%3A%22event_active_install_user%22%7D%5D%7D
+
+version=%7B%22app_events_version%22%3A%2216_0%22%2C%22set_urls_version%22%3A%2216_5%22%2C%22app_version_name%22%3A%22v4.1.1%22%2C%22set_settings_version%22%3A%2216_14%22%2C%22events%22%3A%5B%7B%22api%22%3A1%2C%22event%22%3A2%2C%22parameters%22%3A%22event%402%2Cfrom%401092a%2Cuid%40S05P9SHTOR7SXOCPMY7BRPCF4682EKAM%257C340107631889983%2Cpu%40cua%40480_800_android_4.1.1_240%2Cosname%40baiduappsearch%2Cctv%401%2Ccfrom%401092a%2Ccuid%40S05P9SHTOR7SXOCPMY7BRPCF4682EKAM%257C340107631889983%2Ccut%40GT-I9128V_4.1.2_16_samsung%2Cver%4016780818%22%2C%22name%22%3A%22event_active_install_user%22%7D%5D%7D
+Accept-Encoding: gzip\r\n
+Content-Length: 600\r\n
+Content-Type: application/x-www-form-urlencoded\r\n
+Host: m.baidu.com\r\n
+Connection: Keep-Alive\r\n
+User-Agent: Apache-HttpClient/UNAVAILABLE (java 1.4)\r\n
 
 
+Full request URI [truncated]: http://m.baidu.com/appsrv?uid=2AA02D14F62A9FB924D7B9723B3C9718%257C719800050017453&psize=2&usertype=0&deviceinfo=GT-I9128V_4.1.2&ver=16780818&from=1092a&operator=&network=WF&pkname=com.baidu.appsearch&country=
+POST /appsrv?uid=2AA02D14F62A9FB924D7B9723B3C9718%257C719800050017453&psize=2&usertype=0&deviceinfo=GT-I9128V_4.1.2&ver=16780818&from=1092a&operator=&network=WF&pkname=com.baidu.appsearch&country=CN&gms=false&platform_version_id=16&firstdoc=&action=upstate&pu=cua%40480_800_android_4.1.1_240%2Cosname%40baiduappsearch%2Cctv%401%2Ccfrom%401092a%2Ccuid%402AA02D14F62A9FB924D7B9723B3C9718%25257C719800050017453%2Ccut%40GT-I9128V_4.1.2_16_samsung&language=zh&apn=& HTTP/1.1
+Line-based text data: application/x-www-form-urlencoded:
+二进制。。。  #cat 91--6-1
 
-
-
+Content-Type: application/x-www-form-urlencoded\r\n
+Accept-Encoding: gzip\r\n
+Content-Length: 5682\r\n
+Host: m.baidu.com\r\n
+Connection: Keep-Alive\r\n
+User-Agent: Apache-HttpClient/UNAVAILABLE (java 1.4)\r\n
 
 
 

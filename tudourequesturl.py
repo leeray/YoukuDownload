@@ -86,31 +86,48 @@ class DownloadTudou():
         req['package'] = False
         return req
         
-    def anzhuo91_2(self, dm='MI+2', imei='867064014692428', imsi='460020666402074', placeid='222029981', mac='c4:6a:b7:4e:e3:36', device='867064014692428') :
-        req = {}
-        url = 'http://bbxdata.sj.91.com/stat.ashx?mt=4&sv=3.2.9.5&osv=4.1&cpu=armeabi-v7a,armeabi&imei=%s&nt=10&dm=GT-I9128V&act=101&resid=4796706&stattype=4&restype=1&isincr=0&placeid=%s&sign=lGkOm3rH4J92Hf1vHOLkijmLzvOE9uccXzE37fToJQ3qzMQ2jH7ELA%%3D%%3D&imsi=' % (imei, placeid)
-        req['url'] = url
-        req['method'] = 'GET'
-        req['package'] = False
-        return req
-    
-    def anzhuo91_3(self, dm='MI+2', imei='867064014692428', imsi='460020666402074', placeid='222029981', mac='c4:6a:b7:4e:e3:36', device='867064014692428') :  
+    def anzhuo91_2(self, dm='MI+2', imei='867064014692428', imsi='460020666402074', placeid='222029981', mac='c4:6a:b7:4e:e3:36', device='867064014692428') :  
         req = {}  
         url = 'http://sj.91rb.com/android/soft//2013/2/20/74b19a07223947e39fbcd44cfa863d62/com.tudou.android_18_3.1_635035419050632500.apk'
+
         req['url'] = url
         req['method'] = 'GET'
         req['package'] = True
         return req
     
-    def anzhuo91_4(self, dm='MI+2', imei='867064014692428', imsi='460020666402074', placeid='222029981', mac='c4:6a:b7:4e:e3:36', device='867064014692428') : 
-        req = {}  
-        url = 'http://bbxdata.sj.91.com/stat.ashx?mt=4&sv=3.2.9.5&osv=4.1&cpu=armeabi-v7a,armeabi&imei=%s&nt=10&dm=GT-I9128V&act=101&resid=4796706&stattype=5&restype=1&root=0&isincr=0&placeid=%s&sign=lGkOm3rH4J92Hf1vHOLkijmLzvOE9uccXzE37fToJQ3P%%2FcwvHJ%%2FN1A%%3D%%3D&imsi=' % (imei, placeid)
-        
+    def anzhuo91_3(self, dm='MI+2', imei='867064014692428', imsi='460020666402074', placeid='222029981', mac='c4:6a:b7:4e:e3:36', device='867064014692428',sign='lGkOm3rH4J92Hf1vHOLkijmLzvOE9uccXzE37fToJQ3qzMQ2jH7ELA%%3D%%3D') :
+        req = {}
+        url = 'http://bbxdata.sj.91.com/stat.ashx?mt=4&sv=3.2.9.5&osv=4.1&cpu=armeabi-v7a,armeabi&imei=%s&nt=10&dm=GT-I9128V&act=101&resid=4796706&stattype=4&restype=1&isincr=0&placeid=%s&sign=%s&imsi=' % (imei, placeid, sign)
         req['url'] = url
         req['method'] = 'GET'
         req['package'] = False
         return req
 
+    def anzhuo91_4(self, dm='MI+2', imei='867064014692428', imsi='460020666402074', placeid='222029981', mac='c4:6a:b7:4e:e3:36', device='867064014692428', sign='lGkOm3rH4J92Hf1vHOLkijmLzvOE9uccXzE37fToJQ3P%%2FcwvHJ%%2FN1A%%3D%%3D') : 
+        req = {}  
+        url = 'http://bbxdata.sj.91.com/stat.ashx?mt=4&sv=3.2.9.5&osv=4.1&cpu=armeabi-v7a,armeabi&imei=%s&nt=10&dm=GT-I9128V&act=101&resid=4796706&stattype=5&restype=1&root=0&isincr=0&placeid=%s&sign=%s&imsi=' % (imei, placeid,sign)
+        
+        req['url'] = url
+        req['method'] = 'GET'
+        req['package'] = False
+        return req
+    
+    def anzhuo91_5(self, dm='MI+2', imei='867064014692428', imsi='460020666402074', placeid='222029981', mac='c4:6a:b7:4e:e3:36', device='867064014692428', sign='lGkOm3rH4J92Hf1vHOLkijmLzvOE9uccXzE37fToJQ3P%%2FcwvHJ%%2FN1A%%3D%%3D', cuid='2AA02D14F62A9FB924D7B9723B3C9718%%257C719800050017453', cuid2='2AA02D14F62A9FB924D7B9723B3C9718%%25257C719800050017453') : 
+        req = {}  
+        url = 'http://m.baidu.com/appsrv?uid=%s&native_api=1&psize=2&usertype=0&ver=16780818&from=1092a&operator=&network=WF&pkname=com.baidu.appsearch&country=CN&gms=false&platform_version_id=16&firstdoc=&activetime=1368071853906&action=interfacesec&pu=cua%%40480_800_android_4.1.1_240%%2Cosname%%40baiduappsearch%%2Cctv%%401%%2Ccfrom%%401092a%%2Ccuid%%40%s%%2Ccut%%40GT-I9128V_4.1.2_16_samsung&language=zh&apn=&' % (cuid, cuid2)
+        data = {'version':'{"app_events_version":"16_0","set_urls_version":"16_5","app_version_name":"v4.1.1","set_settings_version":"16_14","events":[{"api":1,"event":2,"parameters":"event@2,from@1092a,uid@%s,pu@cua@480_800_android_4.1.1_240,osname@baiduappsearch,ctv@1,cfrom@1092a,cuid@%s,cut@GT-I9128V_4.1.2_16_samsung,ver@16780818","name":"event_active_install_user"}]}' % (cuid, cuid2)}
+        headers = {'Accept-Encoding': 'gzip',
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Host': 'm.baidu.com',
+        'Connection': 'Keep-Alive',
+        'Content-Length': '600',
+        'User-Agent': 'Apache-HttpClient/UNAVAILABLE (java 1.4)'}
+        req['url'] = url
+        req['method'] = 'POST'
+        req['data'] = data
+        req['header'] = headers
+        req['package'] = False
+        return req
     
     def shouji360_1(self) :
         req = {}
