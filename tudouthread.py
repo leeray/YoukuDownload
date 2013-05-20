@@ -54,9 +54,6 @@ class TestThread(threading.Thread):
                         else:
                             para_data = ''
                         
-                        print para_data
-                        print header
-                        
                         if header:
                             request = urllib2.Request(req['url'], para_data, headers=header)
                         else:
@@ -75,8 +72,8 @@ class TestThread(threading.Thread):
 
                     if req['package'] is False:
                         the_page = response.read()
-                        print 'URL:', req['url'] 
-                        print 'RESPONSE:', the_page
+                        #print 'URL:', req['url'] 
+                        #print 'RESPONSE:', the_page
                     
                 except urllib2.HTTPError, e:
                     print 'TestThread(', count, ') HTTPError: ', e
